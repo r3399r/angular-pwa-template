@@ -1,0 +1,7 @@
+{
+  "name": "yy-account",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
