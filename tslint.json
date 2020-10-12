@@ -1,5 +1,8 @@
 {
   "extends": "tslint:recommended",
+  "linterOptions": {
+    "exclude": ["www", "node_modules", "coverage"]
+  },
   "rules": {
     "align": {
       "options": ["parameters", "statements"]
@@ -21,6 +24,7 @@
     "indent": {
       "options": ["spaces"]
     },
+    "linebreak-style": [true, "LF"],
     "max-classes-per-file": false,
     "max-line-length": [true, 140],
     "member-ordering": [
