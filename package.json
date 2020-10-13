@@ -10,12 +10,14 @@
     "test:coverage": "ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadless",
     "lint:ts": "ng lint",
     "fix:ts": "npm run lint:ts -- --fix",
-    "lint:format": "prettier --config ./prettierrc.json --list-different \"./src/*\"",
+    "lint:format": "prettier --config ./prettierrc.json --list-different \"./src/**/*.{js,ts,json,md,css,scss,html}\"",
     "fix:format": "npm run lint:format -- --write",
+    "lint": "run-s lint:*",
     "fix": "run-s fix:*",
     "e2e": "ng e2e",
     "clean": "del-cli www -f",
     "pre:dev": "run-s clean fix build test:coverage",
+    "pre:commit": "run-s clean lint test:coverage",
     "deploy": "npm run build && aws s3 sync ./www s3://yy-account --size-only"
   },
   "dependencies": {
@@ -47,6 +49,7 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "del-cli": "^3.0.1",
+    "husky": "^4.3.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -59,6 +62,12 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
+    "tslint-microsoft-contrib": "^6.2.0",
     "typescript": "~3.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre:commit"
+    }
   }
 }

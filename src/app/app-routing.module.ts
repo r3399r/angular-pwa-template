@@ -5,8 +5,8 @@ import {
   RouterModule,
   Routes,
 } from '@angular/router';
-import { HomePage } from './home/home.page';
-import { ListComponent } from './pages/list/list.component';
+import { HomePage } from 'src/app/home/home.page';
+import { ListComponent } from 'src/app/pages/list/list.component';
 
 const rootRoute: Route = {
   path: '',

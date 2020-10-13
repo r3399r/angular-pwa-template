@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-
-import { ListComponent } from './list.component';
+import { ListComponent } from 'src/app/pages/list/list.component';
 
 describe('ListComponent', () => {
   let component: ListComponent;

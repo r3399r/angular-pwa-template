@@ -13,7 +13,7 @@ export class HomePage {
     this.router = router;
   }
 
-  public async onClick(){
+  public async onClick() {
     this.router.navigate(['/list']);
   }
 }
