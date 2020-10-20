@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "yy-account",
+  "appName": "PROJECT_NAME",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

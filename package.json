@@ -1,5 +1,5 @@
 {
-  "name": "yy-account",
+  "name": "PROJECT_NAME",
   "version": "0.0.1",
   "author": "Yue Chang",
   "scripts": {
@@ -18,7 +18,7 @@
     "clean": "del-cli www -f",
     "pre:dev": "run-s clean fix build test:coverage",
     "pre:commit": "run-s clean lint test:coverage",
-    "deploy": "npm run build && aws s3 sync ./www s3://yy-account --size-only"
+    "deploy": "npm run build && aws s3 sync ./www s3://{{S3_BUCKET_NAME}} --size-only"
   },
   "dependencies": {
     "@angular/common": "~10.0.0",
