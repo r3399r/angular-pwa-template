@@ -15,4 +15,4 @@ After creating new repository, please set the restriction to protect master bran
    * check **Require pull request reviews before merging**
    * check **Dismiss stale pull request approvals when new commits are pushed**
    * check **Require review from Code Owners**
-
+   * check **Include administrators**
