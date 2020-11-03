@@ -19,6 +19,12 @@ module.exports = function (config) {
       dir: require('path').join(__dirname, './coverage'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true,
+      thresholds: {
+        statements: 90,
+        lines: 90,
+        branches: 90,
+        functions: 90
+      }
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
