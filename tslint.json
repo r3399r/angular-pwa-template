@@ -63,24 +63,7 @@
         "named": "never"
       }
     },
-    "typedef-whitespace": {
-      "options": [
-        {
-          "call-signature": "nospace",
-          "index-signature": "nospace",
-          "parameter": "nospace",
-          "property-declaration": "nospace",
-          "variable-declaration": "nospace"
-        },
-        {
-          "call-signature": "onespace",
-          "index-signature": "onespace",
-          "parameter": "onespace",
-          "property-declaration": "onespace",
-          "variable-declaration": "onespace"
-        }
-      ]
-    },
+    "typedef": [true, "paramter", "property-declaration", "member-variable-declaration"],
     "variable-name": {
       "options": ["ban-keywords", "check-format", "allow-pascal-case"]
     },
