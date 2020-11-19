@@ -4,12 +4,12 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from 'src/app/pages/home/home.component';
 
-describe('HomeComponent', () => {
+describe('HomeComponent', (): void => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
   let routerSpy: jasmine.Spy;
 
-  beforeEach(async(() => {
+  beforeEach(async((): void => {
     routerSpy = spyOn(Router.prototype, 'navigate');
 
     TestBed.configureTestingModule({
@@ -22,11 +22,11 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it('should create', (): void => {
     expect(component).toBeTruthy();
   });
 
-  it('onClick should work', async () => {
+  it('onClick should work', async (): Promise<void> => {
     await component.onClick();
 
     expect(routerSpy).toHaveBeenCalledTimes(1);

@@ -63,7 +63,7 @@
         "named": "never"
       }
     },
-    "typedef": [true, "paramter", "property-declaration", "member-variable-declaration"],
+    "typedef": [true, "arrow-call-signature", "arrow-parameter", "call-signature", "paramter", "property-declaration", "member-variable-declaration"],
     "variable-name": {
       "options": ["ban-keywords", "check-format", "allow-pascal-case"]
     },

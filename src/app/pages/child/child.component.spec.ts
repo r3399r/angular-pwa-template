@@ -2,11 +2,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import { ChildComponent } from 'src/app/pages/child/child.component';
 
-describe('ChildComponent', () => {
+describe('ChildComponent', (): void => {
   let component: ChildComponent;
   let fixture: ComponentFixture<ChildComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(async((): void => {
     TestBed.configureTestingModule({
       declarations: [ChildComponent],
       imports: [IonicModule.forRoot()],
@@ -17,7 +17,7 @@ describe('ChildComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it('should create', (): void => {
     expect(component).toBeTruthy();
   });
 });

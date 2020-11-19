@@ -13,9 +13,9 @@ export class HomeComponent implements OnInit {
     this.router = router;
   }
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 
-  public async onClick() {
+  public async onClick(): Promise<void> {
     this.router.navigate(['child']);
   }
 }
