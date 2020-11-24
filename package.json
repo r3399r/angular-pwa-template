@@ -4,10 +4,10 @@
   "author": "Yue Chang",
   "scripts": {
     "ng": "ng",
-    "serve": "ng serve --host 0.0.0.0",
-    "build": "npm run clean && ng build",
+    "start": "ng serve --host 0.0.0.0",
+    "build": "npm run clean && ng build --prod",
     "test": "ng test --code-coverage",
-    "test:coverage": "ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadless",
+    "test:headless": "ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadless",
     "lint:ts": "ng lint",
     "fix:ts": "npm run lint:ts -- --fix",
     "lint:format": "prettier --config ./prettierrc.json --list-different \"./src/**/*.{js,ts,json,md,css,scss,html}\"",
@@ -16,8 +16,8 @@
     "fix": "run-s fix:*",
     "e2e": "ng e2e",
     "clean": "del-cli www -f",
-    "pre:dev": "run-s clean fix build test:coverage",
-    "pre:commit": "run-s clean lint test:coverage",
+    "pre:dev": "run-s clean fix test:headless",
+    "pre:commit": "run-s clean lint test:headless",
     "deploy": "npm run build && aws s3 sync ./www s3://{{S3_BUCKET_NAME}} --size-only"
   },
   "dependencies": {
@@ -57,6 +57,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~3.3.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "lint-staged": "^10.5.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
     "protractor": "~7.0.0",
