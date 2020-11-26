@@ -1,33 +1,60 @@
 {
-  "extends": ["tslint:recommended", "tslint-microsoft-contrib/recommended"],
-  "linterOptions": {
-    "exclude": ["www/**", "node_modules/**", "coverage/**", "e2e/**"]
-  },
+  "extends": [
+    "tslint:recommended",
+    "tslint-microsoft-contrib/recommended"
+  ],
+  "rulesDirectory": [
+    "codelyzer"
+  ],
   "rules": {
     "align": {
-      "options": ["parameters", "statements"]
+      "options": [
+        "parameters",
+        "statements"
+      ]
     },
     "array-type": false,
     "arrow-return-shorthand": true,
+    "component-class-suffix": true,
+    "component-selector": [
+      true,
+      "element",
+      "app",
+      "kebab-case"
+    ],
+    "contextual-lifecycle": true,
     "curly": true,
     "deprecation": {
       "severity": "warning"
     },
-    "component-class-suffix": [true, "Page", "Component"],
-    "contextual-lifecycle": true,
     "directive-class-suffix": true,
-    "directive-selector": [true, "attribute", "app", "camelCase"],
-    "component-selector": [true, "element", "app", "kebab-case"],
+    "directive-selector": [
+      true,
+      "attribute",
+      "app",
+      "camelCase"
+    ],
     "eofline": true,
     "export-name": false,
-    "import-blacklist": [true, "rxjs/Rx"],
+    "import-blacklist": [
+      true,
+      "rxjs/Rx"
+    ],
     "import-spacing": true,
     "indent": {
-      "options": ["spaces"]
+      "options": [
+        "spaces"
+      ]
     },
-    "linebreak-style": [true, "LF"],
+    "linebreak-style": [
+      true,
+      "LF"
+    ],
     "max-classes-per-file": false,
-    "max-line-length": [true, 140],
+    "max-line-length": [
+      true,
+      140
+    ],
     "member-ordering": [
       true,
       {
@@ -39,20 +66,43 @@
         ]
       }
     ],
-    "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
+    "no-conflicting-lifecycle": true,
+    "no-console": [
+      true,
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
     "no-empty": false,
-    "no-inferrable-types": [true, "ignore-params"],
+    "no-host-metadata-property": true,
+    "no-inferrable-types": false,
+    "no-input-rename": true,
+    "no-inputs-metadata-property": true,
     "no-non-null-assertion": true,
+    "no-output-native": true,
+    "no-output-on-prefix": true,
+    "no-output-rename": true,
+    "no-outputs-metadata-property": true,
     "no-redundant-jsdoc": true,
     "no-relative-imports": true,
     "no-switch-case-fall-through": true,
     "no-var-requires": false,
-    "object-literal-key-quotes": [true, "as-needed"],
+    "object-literal-key-quotes": [
+      true,
+      "as-needed"
+    ],
     "ordered-imports": true,
     "prefer-type-cast": false,
-    "quotemark": [true, "single"],
+    "quotemark": [
+      true,
+      "single"
+    ],
     "semicolon": {
-      "options": ["always"]
+      "options": [
+        "always"
+      ]
     },
     "space-before-function-paren": {
       "options": {
@@ -63,9 +113,43 @@
         "named": "never"
       }
     },
-    "typedef": [true, "arrow-call-signature", "arrow-parameter", "call-signature", "paramter", "property-declaration", "member-variable-declaration"],
+    "template-banana-in-box": true,
+    "template-no-negated-async": true,
+    "typedef": [
+      true,
+      "arrow-call-signature",
+      "arrow-parameter",
+      "call-signature",
+      "paramter",
+      "property-declaration",
+      "member-variable-declaration"
+    ],
+    "typedef-whitespace": {
+      "options": [
+        {
+          "call-signature": "nospace",
+          "index-signature": "nospace",
+          "parameter": "nospace",
+          "property-declaration": "nospace",
+          "variable-declaration": "nospace"
+        },
+        {
+          "call-signature": "onespace",
+          "index-signature": "onespace",
+          "parameter": "onespace",
+          "property-declaration": "onespace",
+          "variable-declaration": "onespace"
+        }
+      ]
+    },
+    "use-lifecycle-interface": true,
+    "use-pipe-transform-interface": true,
     "variable-name": {
-      "options": ["ban-keywords", "check-format", "allow-pascal-case"]
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-pascal-case"
+      ]
     },
     "whitespace": {
       "options": [
@@ -76,20 +160,6 @@
         "check-type",
         "check-typecast"
       ]
-    },
-    "no-conflicting-lifecycle": true,
-    "no-host-metadata-property": true,
-    "no-input-rename": true,
-    "no-inputs-metadata-property": true,
-    "no-output-native": true,
-    "no-output-on-prefix": true,
-    "no-output-rename": true,
-    "no-outputs-metadata-property": true,
-    "template-banana-in-box": true,
-    "template-no-negated-async": true,
-    "use-lifecycle-interface": true,
-    "use-pipe-transform-interface": true,
-    "object-literal-sort-keys": false
-  },
-  "rulesDirectory": ["codelyzer"]
+    }
+  }
 }

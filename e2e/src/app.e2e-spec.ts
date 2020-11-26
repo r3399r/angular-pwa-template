@@ -1,14 +1,27 @@
-import { AppPage } from './app.po';
+import { AppPage } from 'e2e/src/app.po';
+import { browser, logging } from 'protractor';
 
-describe('new App', () => {
+describe('workspace-project App', (): void => {
   let page: AppPage;
 
-  beforeEach(() => {
+  beforeEach((): void => {
     page = new AppPage();
   });
 
-  it('should be blank', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toContain('Start with Ionic UI Components');
+  it('should display welcome message', async (): Promise<void> => {
+    await page.navigateTo();
+    expect(await page.getTitleText()).toEqual('app is running!');
   });
+
+  afterEach(
+    async (): Promise<void> => {
+      // Assert that there are no errors emitted from the browser
+      const logs = await browser.manage().logs().get(logging.Type.BROWSER);
+      expect(logs).not.toContain(
+        jasmine.objectContaining({
+          level: logging.Level.SEVERE,
+        } as logging.Entry)
+      );
+    }
+  );
 });

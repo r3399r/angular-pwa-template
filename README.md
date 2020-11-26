@@ -1,34 +1,26 @@
 # yy-angular-ionic-template
 
-This repository is a template for front-end development environment which applies angular and ionic framework.
+This project is using [Angular Framework](https://angular.io/). After a developer clones the source code from github, please run `npm install` first to install all the required packages.
 
-## Required tools
+## Development server
 
-In this project, we use `nodejs` to manage the code, so please install `node` and `npm` first. Then you may need to run the command below to prepare the required command line tools.
+Run `npm start` or `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-```shell
-npm install -g @ionic/cli native-run cordova-res
-```
+## Code scaffolding
 
-## Run and Test
+Run `ng generate {schematic} {name}` to generate a new component. Please refer to [ng generate](https://angular.io/cli/generate).
 
-Before anything, we need to install required packages in `node_modules`
+## Build
 
-```shell
-npm install
-```
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-To run the serve,
+## Running unit tests
 
-```shell
-npm run serve
-```
+Run `npm test` or `npm run test` to execute the unit tests and check the code coverage. We should improve our code coverage as close to 100% as possible.
 
-To run the unit test,
+## Before commit
 
-```sh
-npm run test
-```
+Run `npm run pre:dev` to make sure that lint passes, build passes, and unit test passes. It is better if unit test covers all your newly added code. If you cannot implement unit test smoothly, please call someone's help.
 
 ## Branch Protection
 
