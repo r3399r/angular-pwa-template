@@ -3,24 +3,22 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { IonicModule } from '@ionic/angular';
 import { LandingComponent } from 'src/app/pages/landing/landing.component';
 
-describe('LandingComponent', (): void => {
+describe('LandingComponent', () => {
   let component: LandingComponent;
   let fixture: ComponentFixture<LandingComponent>;
 
-  beforeEach(
-    async (): Promise<void> => {
-      TestBed.configureTestingModule({
-        declarations: [LandingComponent],
-        imports: [IonicModule.forRoot(), RouterTestingModule],
-      }).compileComponents();
+  beforeEach(async () => {
+    TestBed.configureTestingModule({
+      declarations: [LandingComponent],
+      imports: [IonicModule.forRoot(), RouterTestingModule],
+    }).compileComponents();
 
-      fixture = TestBed.createComponent(LandingComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-    }
-  );
+    fixture = TestBed.createComponent(LandingComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-  it('should create', (): void => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

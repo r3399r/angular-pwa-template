@@ -117,7 +117,6 @@
     "template-no-negated-async": true,
     "typedef": [
       true,
-      "arrow-call-signature",
       "arrow-parameter",
       "call-signature",
       "paramter",
