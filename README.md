@@ -1,4 +1,4 @@
-# yy-angular-ionic-template
+# angular-ionic-template
 
 This project is using [Angular Framework](https://angular.io/). After a developer clones the source code from github, please run `npm install` first to install all the required packages.
 
